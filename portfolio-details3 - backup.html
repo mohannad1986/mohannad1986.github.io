@@ -366,35 +366,32 @@
 
 
          ];
-
-        //  +++++++++++++++++++++++
-        const swiper = new Swiper('.portfolio-details-slider', {
-          loop: true,
-          speed: 600,
-          slidesPerView: 'auto',
-          navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-          },
-          pagination: {
-            el: '.swiper-pagination',
-            type: 'bullets',
-            clickable: true,
-          },
+  
+      // حدد مكان عرض النص
+      const textContainer = document.getElementById('slide-description');
+  
+      // ابحث عن كائن الـ Swiper المُستخدم (تم إنشاؤه تلقائياً من المكتبة)
+      let swiperInstance;
+  
+      // انتظر حتى يتم تحميل Swiper بشكل كامل
+      setTimeout(() => {
+        // احصل على أول كائن Swiper متاح
+        swiperInstance = document.querySelector('.swiper').swiper;
+  
+        // دالة لتحديث النص
+        function updateText(index) {
+          const realIndex = index % slideTexts.length;
+          textContainer.innerHTML = slideTexts[realIndex];
+        }
+  
+        // حدث عند التغيير
+        swiperInstance.on('slideChange', function () {
+          updateText(swiperInstance.realIndex);
         });
-
-        // عند تغيير السلايد، قم بتحديث النص
-        swiper.on('slideChange', function () {
-          const slideIndex = swiper.activeIndex;
-          document.getElementById('slide-description').innerHTML = slideTexts[slideIndex];
-        });
-
-        // تحديث النص عند التحميل الأول
-        document.getElementById('slide-description').innerHTML = slideTexts[swiper.activeIndex];
-
-              // ++++++++++++++++++++++++
-        
-        
+  
+        // عرض النص الأول مباشرة
+        updateText(swiperInstance.realIndex);
+      }, 500); // انتظر لحظة حتى يجهز Swiper
     });
   </script>
   
