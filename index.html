@@ -400,26 +400,49 @@
             </div>
             <!-- End Portfolio Item -->
 
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+            <!-- <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
               <img src="assets/img/portfolio/product-1.jpg" class="img-fluid" alt="">
               <div class="portfolio-info">
                 <h4>SYR.tour</h4>
                 <p>Lorem ipsum, dolor sit amet consectetur</p>
                 <a href="assets/img/portfolio/product-1.jpg" title="Product 1" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                <a href="" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+              </div>
+            </div> -->
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+              <img src="assets/img/portfolio/product-1.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>SYR.tour</h4>
+                <p>Details coming soon — stay tuned</p>
+                <a href="assets/img/portfolio/product-1.jpg" title="SYR.tour" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <a href="javascript:void(0);" onclick="showPendingAlert()" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
               </div>
             </div>
+            
             <!-- End Portfolio Item -->
 
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+            <!-- <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
               <img src="assets/img/portfolio/branding-1.jpg" class="img-fluid" alt="">
               <div class="portfolio-info">
                 <h4>SYR.tour3</h4>
                 <p>Lorem ipsum, dolor sit amet consectetur</p>
                 <a href="assets/img/portfolio/branding-1.jpg" title="Branding 1" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                <a href="" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a> 
+               
+              </div>
+            </div> -->
+          
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+              <img src="assets/img/portfolio/branding-1.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>SYR.tour3</h4>
+                <p>Details coming soon — stay tuned</p>
+                <a href="assets/img/portfolio/branding-1.jpg" title="SYR.tour3" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <a href="javascript:void(0);" onclick="showPendingAlert()" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
               </div>
             </div>
+            
+            
             <!-- End Portfolio Item -->
 
             <!-- <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-books">
@@ -547,7 +570,9 @@
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>Contact</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+        <!-- <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p> -->
+        <p>Whether you have a question, a collaboration idea, or just want to say hi — feel free to get in touch. I’d love to hear from you!</p>
+
       </div><!-- End Section Title -->
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
@@ -676,6 +701,21 @@
   <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script>
+    function showPendingAlert() {
+      Swal.fire({
+        icon: 'info',
+        title: 'Coming Soon',
+        text: 'The project report is currently being prepared. Please check back later.',
+        confirmButtonText: 'OK',
+        confirmButtonColor: '#3085d6'
+      });
+    }
+  </script>
+  
+
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
