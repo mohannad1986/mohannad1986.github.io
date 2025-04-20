@@ -313,7 +313,7 @@
                   <h3>Project Info</h3>
                   <ul>
                     <li><strong>Type:</strong> Full-Stack Web App</li>
-                    <li><strong>Date:</strong> Sep 15, 2023</li>
+                    <li><strong>Date:</strong> Sep 15, 2024</li>
                     <li><strong>Tools:</strong> Laravel 9, RBAC, JWT, Stripe</li>
                     <li><strong>Status:</strong> Report in progress</li>
                     <li><strong>GitHub:</strong> 
@@ -452,7 +452,7 @@
 
         //  +++++++++++++++++++++++
         const swiper = new Swiper('.portfolio-details-slider', {
-          loop: true,
+          loop: false,
           speed: 600,
           slidesPerView: 'auto',
           navigation: {
@@ -464,6 +464,7 @@
             type: 'bullets',
             clickable: true,
           },
+          touchEventsTarget: 'wrapper',
         });
 
         // عند تغيير السلايد، قم بتحديث النص
